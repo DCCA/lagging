@@ -1,4 +1,4 @@
-import mongoose, { mongo } from 'mongoose';
+import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
 
@@ -6,7 +6,7 @@ interface ITask extends mongoose.Document {
   name: string;
   category: string;
   timeStarted: Date;
-  timeFinished: Date;
+  timeFinished?: Date;
   user: string;
 }
 
@@ -17,7 +17,6 @@ const taskSchema = new Schema({
   },
   category: {
     type: String,
-    required: true,
     default: 'none',
   },
   timeStarted: {
@@ -26,7 +25,6 @@ const taskSchema = new Schema({
   },
   timeFinished: {
     type: Date,
-    required: true,
   },
   user: {
     type: Schema.Types.ObjectId,

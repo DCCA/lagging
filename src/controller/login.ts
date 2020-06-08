@@ -38,7 +38,7 @@ export const postLogin = async (
         },
         secret,
         {
-          expiresIn: '1h',
+          expiresIn: '5h',
         }
       );
       return res.status(200).json({
