@@ -5,6 +5,10 @@ import { isLogin } from '../middleware/is-auth';
 
 const router = express.Router();
 
+// Get tasks
+router.get('/tasks');
+// Get task
+router.get('/task');
 // Create task
 router.post(
   '/create-task',
@@ -20,6 +24,6 @@ router.post(
 // Edit task
 router.post('/edit-task');
 // Delete task
-router.post('/delete-task');
+router.delete('/delete-task/:id', isLogin, taskController.deleteTask);
 
 export default router;
