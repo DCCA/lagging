@@ -1,14 +1,16 @@
 import mongoose from 'mongoose';
 
+const Schema = mongoose.Schema;
+
 interface IUser extends mongoose.Document {
   name: string;
   email: string;
   password: string;
-  hourly_rate: number;
-  tasks: [];
+  hourlyRate: number;
+  tasks: string[];
 }
 
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -21,13 +23,13 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  hourly_rate: {
+  hourlyRate: {
     type: Number,
     required: true,
   },
   tasks: [
     {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: 'Task',
     },
   ],
