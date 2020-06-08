@@ -28,3 +28,7 @@ It will give you ability to see where you time is being spend and give you the o
   - Time Finished
   - Total Time Spent
   - Day
+
+## To Dos
+
+- [] Implement a error handler middleware

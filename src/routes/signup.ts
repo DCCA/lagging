@@ -18,8 +18,7 @@ router.post(
             return Promise.reject('E-mail is already taken');
           }
         });
-      })
-      .withMessage('Please insert a valid e-mail'),
+      }),
     body('password')
       .trim()
       .isLength({ min: 5 })

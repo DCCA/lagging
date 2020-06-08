@@ -1,4 +1,4 @@
 node_modules
-database.ts
+# database.ts
 .vscode
 nodemon.json
