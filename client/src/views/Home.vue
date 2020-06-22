@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Hi there!</h1>
+    <h1>Welcome to your time-tracking app</h1>
   </div>
 </template>
 
