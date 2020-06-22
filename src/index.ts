@@ -11,6 +11,20 @@ import taskRoutes from './routes/task';
 const app = express();
 app.use(bodyParser.json());
 
+// Fix cors
+app.use((req, res, next) => {
+  // Set domains
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  // Set the methods
+  res.setHeader(
+    'Access-Control-Allow-Methods',
+    'GET, POST, PUT, PATCH, DELETE'
+  );
+  //
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
+
 app.use('/api/v1', signupRoutes);
 app.use('/api/v1', loginRoutes);
 app.use('/api/v1/tasks', taskRoutes);

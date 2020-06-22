@@ -26,7 +26,7 @@ router.post(
     body('hourlyRate')
       .notEmpty()
       .isNumeric()
-      .withMessage('Please valid a value'),
+      .withMessage('Please insert a valid hourly rate value'),
   ],
   postSignUp
 );

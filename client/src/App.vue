@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="container">
     <app-header></app-header>
     <router-view />
     <app-footer></app-footer>
@@ -22,7 +22,7 @@ export default {
 
 #app {
   font-family: 'MuseoModerno', cursive;
-  max-width: 1250px;
+  // max-width: 1250px;
   min-height: 100vh;
   margin: auto;
 }

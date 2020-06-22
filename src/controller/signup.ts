@@ -15,7 +15,7 @@ export const postSignUp = async (
     return res.status(422).json(result);
   }
   // Get data from body
-  const { name, email, password, hourlyRate } = req.body;
+  const { name, email, password, hourlyRate = 0 } = req.body;
 
   try {
     // Hash the password
