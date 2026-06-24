@@ -20,7 +20,7 @@
     "@types/jsonwebtoken": "^8.5.0",
     "@types/mongodb": "^3.5.20",
     "@types/mongoose": "^5.7.22",
-    "bcrypt": "^5.0.0",
+    "bcrypt": "^5.1.1",
     "express": "^4.17.1",
     "express-async-errors": "^3.1.1",
     "express-validator": "^6.5.0",
@@ -31,6 +31,6 @@
     "typescript": "^3.9.5"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.1.14"
   }
 }
